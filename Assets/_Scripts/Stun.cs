@@ -4,11 +4,11 @@ using System.Collections;
 public class Stun : MonoBehaviour
 {
     private float duration = 0;
-    private NavMeshAgent navMeshAgent;
+    private UnityEngine.AI.NavMeshAgent navMeshAgent;
 
     private void Awake()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
     void Start ()

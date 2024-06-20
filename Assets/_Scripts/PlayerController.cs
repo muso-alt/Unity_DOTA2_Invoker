@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public GameObject selectionMarker;
     private Renderer selectionMarkerRend;
 
-	private NavMeshAgent navMeshAgent;
+	private UnityEngine.AI.NavMeshAgent navMeshAgent;
     private GameObject affecter;
 	private GameObject target;
 	private Ray shootRay;
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 	void Awake () 
 	{
         selectionMarkerRend = selectionMarker.GetComponent<Renderer>();
-		navMeshAgent = GetComponent<NavMeshAgent> ();
+		navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
 	}
 
     void Start()

@@ -23,7 +23,7 @@ public class Tornado : MonoBehaviour
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        particleObject = transform.FindChild("Particles").gameObject;
+        particleObject = transform.Find("Particles").gameObject;
     }
 
 	// Use this for initialization

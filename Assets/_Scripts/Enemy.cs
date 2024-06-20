@@ -13,11 +13,11 @@ public class Enemy : MonoBehaviour
     public Transform[] wayPoints;
     private int nextWayPoint;
 
-    public NavMeshAgent navMeshAgent;
+    public UnityEngine.AI.NavMeshAgent navMeshAgent;
 
     private void Awake()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
     void Start()

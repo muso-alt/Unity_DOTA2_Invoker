@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
-using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Invoker : MonoBehaviour 
 {
@@ -39,15 +37,15 @@ public class Invoker : MonoBehaviour
 
 	void Start()
 	{
-		E1Q = transform.FindChild("Circle").FindChild("Element1").GetChild(0);
-		E1W = transform.FindChild("Circle").FindChild("Element1").GetChild(1);
-		E1E = transform.FindChild("Circle").FindChild("Element1").GetChild(2);
-		E2Q = transform.FindChild("Circle").FindChild("Element2").GetChild(0);
-		E2W = transform.FindChild("Circle").FindChild("Element2").GetChild(1);
-		E2E = transform.FindChild("Circle").FindChild("Element2").GetChild(2);
-		E3Q = transform.FindChild("Circle").FindChild("Element3").GetChild(0);
-		E3W = transform.FindChild("Circle").FindChild("Element3").GetChild(1);
-		E3E = transform.FindChild("Circle").FindChild("Element3").GetChild(2);
+		E1Q = transform.Find("Circle").Find("Element1").GetChild(0);
+		E1W = transform.Find("Circle").Find("Element1").GetChild(1);
+		E1E = transform.Find("Circle").Find("Element1").GetChild(2);
+		E2Q = transform.Find("Circle").Find("Element2").GetChild(0);
+		E2W = transform.Find("Circle").Find("Element2").GetChild(1);
+		E2E = transform.Find("Circle").Find("Element2").GetChild(2);
+		E3Q = transform.Find("Circle").Find("Element3").GetChild(0);
+		E3W = transform.Find("Circle").Find("Element3").GetChild(1);
+		E3E = transform.Find("Circle").Find("Element3").GetChild(2);
 	}
 	
 	// Update is called once per frame

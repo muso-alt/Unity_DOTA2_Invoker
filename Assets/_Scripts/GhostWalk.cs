@@ -10,7 +10,7 @@ public class GhostWalk : MonoBehaviour
     private float enemySlowMultiplier;
 
     // Components
-    private NavMeshAgent navMeshAgent;
+    private UnityEngine.AI.NavMeshAgent navMeshAgent;
     private SphereCollider sphereCol;
 
     // Visuals
@@ -25,7 +25,7 @@ public class GhostWalk : MonoBehaviour
 	// Assign references
 	void Awake () 
 	{
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         sphereCol = gameObject.AddComponent<SphereCollider>();
         audioSource = GetComponent<AudioSource>();
         render = GetComponent<Renderer>();
@@ -57,7 +57,7 @@ public class GhostWalk : MonoBehaviour
         if(other.CompareTag("Enemy"))
         {
             print("Entered: " + other.name);
-            other.GetComponent<NavMeshAgent>().speed *= (1 + enemySlowMultiplier);
+            other.GetComponent<UnityEngine.AI.NavMeshAgent>().speed *= (1 + enemySlowMultiplier);
         }
     }
 
@@ -65,7 +65,7 @@ public class GhostWalk : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<NavMeshAgent>().speed /= (1 + enemySlowMultiplier);
+            other.GetComponent<UnityEngine.AI.NavMeshAgent>().speed /= (1 + enemySlowMultiplier);
        
         }
     }
